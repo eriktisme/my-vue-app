@@ -1,0 +1,7 @@
+{
+  "name": "@scaling-ui/layouts",
+  "version": "0.0.0",
+  "module": "index.ts",
+  "license": "MIT",
+  "sideEffects": false
+}

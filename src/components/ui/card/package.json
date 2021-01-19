@@ -1,0 +1,7 @@
+{
+  "name": "@scaling-ui/card",
+  "version": "0.0.0",
+  "module": "index.ts",
+  "license": "MIT",
+  "sideEffects": false
+}
