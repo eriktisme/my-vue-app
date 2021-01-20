@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-sm px-3 m-auto md:px-0">
+  <div class="w-full max-w-lg px-3 md:px-0 m-auto">
     <Card>
       <CardSection>
         <form @submit.prevent="login">
@@ -9,13 +9,15 @@
           </Group>
           <Group>
             <Label>Password</Label>
-            <InputField :value="password" type="password" />
+            <InputField :value="password" type="password"/>
           </Group>
           <Button
+              :busy="loading"
               block="true"
               rounded="true"
-              type="submit">
-            Login
+              type="submit"
+          >
+            Sign in
           </Button>
         </form>
       </CardSection>

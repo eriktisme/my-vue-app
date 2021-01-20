@@ -1,18 +1,19 @@
 import { ref } from "vue";
 
 export const useApi = (endpoint: string) => {
-  const loading = ref(true);
+  const loading = ref(false);
   const data = ref();
-  const error = ref();
+  const errors = ref();
 
   const post = (payload?: Record<string, any>) => {
-    console.log('call api endpoint')
+    loading.value = true;
+    errors.value = undefined;
   }
 
   return {
     loading,
     data,
-    error,
+    errors,
     post,
   }
 }
