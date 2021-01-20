@@ -5,7 +5,7 @@
            :disabled="disabled"
            :aria-label="label"
            :placeholder="placeholder"
-           class="rounded shadow border p-2 block w-full text-black leading-normal align-middle bg-white text-base bg-clip-padding appearance-none outline-none active:border-blue-500 focus:border-blue-500 transition-all" />
+           class="rounded-md p-2 block w-full text-black leading-normal align-middle bg-gray-100 text-base bg-clip-padding appearance-none outline-none border focus:shadow-outline transition-all"/>
   </span>
 </template>
 
@@ -13,6 +13,8 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
+  name: 'InputField',
+  emits: ['update:modelValue'],
   props: {
     value: {
       type: String,
@@ -34,7 +36,7 @@ export default defineComponent({
     disabled: {
       type: Boolean,
       default: false
-    },
+    }
   },
 
   setup({value, type, disabled, name, placeholder, label}) {
