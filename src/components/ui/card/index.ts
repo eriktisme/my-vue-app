@@ -1,4 +1,2 @@
-import Card from './Card.vue';
-import CardSection from './CardSection.vue';
-
-export { Card, CardSection };
+export { Card } from './Card';
+export { CardSection} from './CardSection';

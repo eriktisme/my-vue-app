@@ -1,0 +1,27 @@
+import { defineComponent, h } from "vue";
+
+export const CardSection = defineComponent({
+  props: {
+    spacing: {
+      type: String,
+      default: "p-4 md:p-8 lg:p-10"
+    }
+  },
+
+  setup({spacing}, {slots}) {
+    return () => h(
+      "div",
+      {
+        class: [
+          "bg-white",
+          "rounded",
+          "border-b",
+          "border-gray-200",
+          "last:border-b-0",
+          spacing,
+        ]
+      },
+      slots.default()
+    )
+  }
+})
